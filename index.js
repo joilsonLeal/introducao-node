@@ -37,7 +37,7 @@ server.put('/users/:index', (req, res) => {
 
 server.delete('/users/:index', (req, res) => {
     const { index } = req.params;
-    users.pop(index);
+    users.splice(index, 1);
     return res.json(users);
 });
 
